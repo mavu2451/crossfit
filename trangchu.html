@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="sweetalert2.all.min.js"></script>
+    </head>
+    <body>
+
+        <h1>Số đo BMI</h1><br><br>
+        <h3>Nhập cân nặng</h3>
+        <input type="number" id="cannang" ><br><br>
+        <h3>Nhập chiều cao</h3>
+        <input type="number" id="chieucao"><br><br>
+        <button type="submit" id="tinh" onclick="tong()">Tổng</button>
+        <button type="reset" id="xoa"><a href="trangchu.html" style="text-decoration: none; color:black">Xóa</a></button>
+        <br><br>
+        <input type="number" id="tong">
+        <br><br>
+        <img src="https://medlatec.vn/Content/images/banner/chi-so-bmi-do-can-nang-chieu-cao.jpg" alt="">
+        <script>
+            function tong(){
+            var bmi;
+            var cannang = document.getElementById("cannang").value
+            var chieucao = document.getElementById("chieucao").value
+            
+            bmi = cannang/(chieucao*chieucao);
+            document.getElementById('tinh').onclick = function(){
+                var tong = document.getElementById("tong").value = (cannang/(chieucao*chieucao))*10000;
+            }
+          
+            }
+        //    function reset(){
+        //     document.getElementById('cannang').value="";
+        //     document.getElementById('chieucao').value ="";
+        //     document.getElementById('tong').value ="";
+        //    }
+
+        </script>
+    </body>
+</html>
